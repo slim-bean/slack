@@ -155,6 +155,12 @@ func TestNewEmailTextInputBlockElement(t *testing.T) {
 	assert.Equal(t, emailTextInputElement.ActionID, "example@example.com")
 }
 
+func TestNewRichTextInputBlockElement(t *testing.T) {
+	richTextInputElement := NewRichTextInputBlockElement(nil, "test")
+	assert.Equal(t, string(richTextInputElement.Type), "rich_text_input")
+	assert.Equal(t, richTextInputElement.ActionID, "test")
+}
+
 func TestNewURLTextInputBlockElement(t *testing.T) {
 	urlTextInputElement := NewURLTextInputBlockElement(nil, "www.example.com")
 
